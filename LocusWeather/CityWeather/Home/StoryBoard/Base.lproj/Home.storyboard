@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bVh-oh-r7M">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="LocusWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-nm-0Ro">
+                                <rect key="frame" x="40" y="400" width="334" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WMm-Xa-YeW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-KI-4db">
+                                <rect key="frame" x="40" y="450" width="334" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="1gU-vb-xql"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1s-be-aZK">
+                                <rect key="frame" x="107" y="476" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mZo-xk-F9I"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="lookupButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVN-f5-eFJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JJ6-nm-0Ro" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3HY-lA-zF7"/>
+                            <constraint firstItem="JJ6-nm-0Ro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="E8j-cy-iGc"/>
+                            <constraint firstItem="C1d-KI-4db" firstAttribute="trailing" secondItem="JJ6-nm-0Ro" secondAttribute="trailing" id="EX6-u2-aqn"/>
+                            <constraint firstItem="b1s-be-aZK" firstAttribute="top" secondItem="C1d-KI-4db" secondAttribute="bottom" constant="25" id="Euc-7Q-bw4"/>
+                            <constraint firstItem="JJ6-nm-0Ro" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="IAj-Hh-Taf"/>
+                            <constraint firstItem="C1d-KI-4db" firstAttribute="top" secondItem="JJ6-nm-0Ro" secondAttribute="bottom" id="Jc9-lZ-oGq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JJ6-nm-0Ro" secondAttribute="trailing" constant="40" id="PwC-VB-gLb"/>
+                            <constraint firstItem="b1s-be-aZK" firstAttribute="width" secondItem="JJ6-nm-0Ro" secondAttribute="width" multiplier="0.6" id="Wnx-JC-F57"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="b1s-be-aZK" secondAttribute="trailing" constant="20" id="gLd-Ej-Lno"/>
+                            <constraint firstItem="b1s-be-aZK" firstAttribute="centerX" secondItem="JJ6-nm-0Ro" secondAttribute="centerX" id="m8s-gT-vjz"/>
+                            <constraint firstItem="b1s-be-aZK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="n2p-cN-2gI"/>
+                            <constraint firstItem="C1d-KI-4db" firstAttribute="leading" secondItem="JJ6-nm-0Ro" secondAttribute="leading" id="yG1-EE-7r0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tjf-ib-0tL"/>
+                    <connections>
+                        <outlet property="lookupButton" destination="b1s-be-aZK" id="5dC-jw-9gQ"/>
+                        <outlet property="separatorView" destination="C1d-KI-4db" id="b99-iC-ReK"/>
+                        <outlet property="textField" destination="JJ6-nm-0Ro" id="u90-kI-nPy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9WU-HE-6be">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bVh-oh-r7M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NRQ-qL-F2I">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YsZ-Vg-UVY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qn4-nF-Cl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="79.6875"/>
+        </scene>
+    </scenes>
+</document>
